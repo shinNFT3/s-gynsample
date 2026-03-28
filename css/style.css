@@ -237,6 +237,13 @@ body.sub-page .header {
   height: 100%;
   object-fit: cover;
   opacity: 0.8;
+  pointer-events: none;
+}
+
+.video-container video::-webkit-media-controls,
+.video-container video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
 }
 
 .video-overlay {
