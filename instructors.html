@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>インストラクター | SCORPION GYM | 柔術・MMAジム</title>
+  <meta name="description" content="SCORPION GYMの現役プロファイターや黒帯からなる実力派インストラクター陣をご紹介します。">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .instructor-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+    }
+    @media (min-width: 768px) {
+      .instructor-card { flex-direction: row; }
+      .instructor-img { width: 35%; flex-shrink: 0; }
+      .instructor-info { width: 65%; padding: 40px; }
+    }
+    .instructor-img img { width: 100%; height: 100%; object-fit: cover; }
+    .instructor-info { padding: 30px; }
+    .instructor-title { color: var(--primary); font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; }
+    .instructor-name { font-size: 2rem; font-weight: 900; margin-bottom: 10px; }
+    .instructor-belt { display: inline-block; background: var(--black); color: var(--white); padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; margin-bottom: 20px; font-weight:bold; }
+    .instructor-bio { color: var(--text); line-height: 1.8; margin-bottom: 20px; }
+    .instructor-achievements h4 { font-size: 1rem; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 10px; }
+    .instructor-achievements ul { padding-left: 20px; list-style-type: square; color: var(--text-light); font-size: 0.9rem; }
+  </style>
+</head>
+<body class="sub-page">
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/s-gym_logo.png" alt="SCORPION GYM Logo" width="180" decoding="async">
+        </a>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="global-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="beginners.html">はじめての方へ</a></li>
+          <li><a href="pricing.html">クラス・料金</a></li>
+          <li><a href="instructors.html" class="active">インストラクター</a></li>
+          <li><a href="facility.html">施設案内</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="faq.html">よくあるご質問</a></li>
+        </ul>
+        <div class="nav-cta"><a href="contact.html" class="nav-btn">体験予約</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">インストラクター</h1>
+        <p>INSTRUCTORS</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <!-- Head Coach -->
+        <div class="instructor-card">
+          <div class="instructor-img">
+            <img src="https://placehold.co/600x800/e0e0e0/ffffff?text=Photo+Coming+Soon" alt="山田 宗近">
+          </div>
+          <div class="instructor-info">
+            <div class="instructor-title">代表・ヘッドコーチ (柔術/No-Gi)</div>
+            <h2 class="instructor-name">恒冨 嘉徳 <span style="font-size:1.2rem; font-weight:normal;">Yoshinori Tsunetomi</span></h2>
+            <div class="instructor-belt">ブラジリアン柔術 黒帯</div>
+            <p class="instructor-bio">
+              日本でのブラジリアン柔術の黎明期から携わり、普及活動を継続中。
+            </p>
+            <div class="instructor-achievements">
+              <h4>主な実績</h4>
+              <ul>
+                <li>柔術指導歴15年</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instructor 2 -->
+        <div class="instructor-card">
+          <div class="instructor-img">
+            <img src="https://placehold.co/600x800/e0e0e0/ffffff?text=Photo+Coming+Soon" alt="須田 智行">
+          </div>
+          <div class="instructor-info">
+            <div class="instructor-title">副代表・スコーピオンジム千里代表</div>
+            <h2 class="instructor-name">須田 智行 <span style="font-size:1.2rem; font-weight:normal;">Tomoyuki Suda</span></h2>
+            <div class="instructor-belt">ブラジリアン柔術 黒帯</div>
+            <p class="instructor-bio">
+              見た目と違い、温厚な性格。常に楽しい雰囲気を心がけてます。気軽に声をかけてください。
+            </p>
+            <div class="instructor-achievements">
+              <h4>主な実績</h4>
+              <ul>
+                <li>才能を最大限に引き出し、トップ選手へ導く育成の名手</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instructor 2 -->
+        <div class="instructor-card">
+          <div class="instructor-img">
+            <img src="https://placehold.co/600x800/e0e0e0/ffffff?text=Photo+Coming+Soon" alt="村尾 誠一">
+          </div>
+          <div class="instructor-info">
+            <div class="instructor-title">柔術コーチ</div>
+            <h2 class="instructor-name">村尾 誠一 <span style="font-size:1.2rem; font-weight:normal;">Seiichi Murao</span></h2>
+            <div class="instructor-belt">ブラジリアン柔術 黒帯</div>
+            <p class="instructor-bio">
+              初心者に分かりやすいレッスンを心がけています。分からないことはどんどん聞いてください。
+            </p>
+            <div class="instructor-achievements">
+              <h4>主な実績</h4>
+              <ul>
+                <li>プロ柔術を中心に活躍</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instructor 3 (New) -->
+        <div class="instructor-card">
+          <div class="instructor-img">
+            <img src="https://placehold.co/600x800/e0e0e0/ffffff?text=Photo+Coming+Soon" alt="柿本 洋一郎">
+          </div>
+          <div class="instructor-info">
+            <div class="instructor-title">柔術・No-Giコーチ</div>
+            <h2 class="instructor-name">柿本 洋一郎 <span style="font-size:1.2rem; font-weight:normal;">Yoichiro Kakimoto</span></h2>
+            <div class="instructor-belt">ブラジリアン柔術 紫帯</div>
+            <p class="instructor-bio">
+              初めての人でも技を覚えられるように繰り返しレッスンを行います。楽しい格闘技ライフを共有しましょう。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="contact.html#line" class="cta-btn btn-line"><i class="fa-brands fa-line"></i> LINE相談</a>
+    <a href="contact.html#reserve" class="cta-btn btn-reserve"><i class="fa-regular fa-calendar-check"></i> 体験予約</a>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <img src="assets/images/s-gym_logo.png" alt="SCORPION GYM" width="250" class="footer-logo">
+          <p>SCORPION GYM (ブラジリアン柔術・No-Gi)<br>〒563-0035 大阪府池田市豊島南2-8-16-A</p>
+        </div>
+        <div class="footer-links">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="beginners.html">はじめての方へ</a></li>
+            <li><a href="pricing.html">クラス・料金</a></li>
+            <li><a href="instructors.html">インストラクター</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>About</h3>
+          <ul>
+            <li><a href="facility.html">施設案内</a></li>
+            <li><a href="access.html">アクセス・店舗情報</a></li>
+            <li><a href="faq.html">よくあるご質問</a></li>
+            <li><a href="contact.html">お問い合わせ・体験予約</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SCORPION GYM. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

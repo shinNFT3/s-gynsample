@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ・体験予約 | SCORPION GYM | 柔術・MMAジム</title>
+  <meta name="description" content="SCORPION GYMへの体験予約、見学、その他のお問い合わせはこちらのフォームまたはLINEから受け付けております。">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--white);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .form-group { margin-bottom: 25px; }
+    .form-label { display: block; font-weight: 700; margin-bottom: 8px; }
+    .form-label .required { color: var(--primary); font-size: 0.8rem; margin-left: 10px; }
+    .form-control {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    .form-control:focus { outline: none; border-color: var(--primary); }
+    textarea.form-control { resize: vertical; min-height: 150px; }
+    
+    .line-contact {
+      background: #06C755;
+      color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .line-contact h3 { font-size: 1.5rem; margin-bottom: 15px; }
+    .line-contact p { margin-bottom: 20px; }
+    .line-btn { display: inline-block; background: #fff; color: #06C755; font-weight: bold; padding: 15px 40px; border-radius: 50px; font-size: 1.1rem; }
+    .line-btn:hover { background: #f0f0f0; }
+  </style>
+</head>
+<body class="sub-page">
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo"><a href="index.html"><img src="assets/images/s-gym_logo.png" alt="SCORPION GYM Logo" width="180" decoding="async"></a></div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="global-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="beginners.html">はじめての方へ</a></li>
+          <li><a href="pricing.html">クラス・料金</a></li>
+          <li><a href="instructors.html">インストラクター</a></li>
+          <li><a href="facility.html">施設案内</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="faq.html">よくあるご質問</a></li>
+        </ul>
+        <div class="nav-cta"><a href="contact.html" class="nav-btn">体験予約</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">お問い合わせ・体験予約</h1>
+        <p>CONTACT & RESERVATION</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <!-- LINE Banner -->
+        <div class="line-contact" id="line">
+          <h3><i class="fa-brands fa-line" style="margin-right:10px;"></i>LINEでカンタン予約・ご相談</h3>
+          <p>体験のお申し込みやご不明な点は、公式LINEからお気軽にお問い合わせください。<br>24時間受付中（スタッフが確認次第ご返信いたします）。</p>
+          <a href="#" class="line-btn">友だち追加してメッセージを送る</a>
+        </div>
+
+        <h2 class="section-title" id="reserve">メールフォーム</h2>
+        
+        <div class="contact-wrapper">
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label class="form-label">お問い合わせの種類 <span class="required">必須</span></label>
+              <select class="form-control" required>
+                <option value="">選択してください</option>
+                <option value="体験予約">体験予約</option>
+                <option value="見学希望">見学希望</option>
+                <option value="入会について">入会について</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">お名前 <span class="required">必須</span></label>
+              <input type="text" class="form-control" placeholder="例：山田 太郎" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">メールアドレス <span class="required">必須</span></label>
+              <input type="email" class="form-control" placeholder="例：example@s-gym.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">電話番号</label>
+              <input type="tel" class="form-control" placeholder="例：03-0000-0000">
+            </div>
+            <div class="form-group">
+              <label class="form-label">ご希望の日時（体験・見学の方）</label>
+              <input type="text" class="form-control" placeholder="例：4月1日 20:00〜 柔術クラス希望">
+            </div>
+            <div class="form-group">
+              <label class="form-label">お問い合わせ内容 <span class="required">必須</span></label>
+              <textarea class="form-control" placeholder="ご質問や格闘技の経験の有無など、ご自由にお書きください。" required></textarea>
+            </div>
+            <div class="text-center mt-4">
+              <p style="font-size: 0.85rem; margin-bottom: 20px; color: var(--text-light);">
+                送信ボタンを押すことで、当ジムの<a href="privacy.html" style="text-decoration:underline; color:var(--primary);">プライバシーポリシー</a>に同意したものとみなします。
+              </p>
+              <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px;">内容を送信する</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky CTA (Mobile) omitted on contact page since they are already here -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <img src="assets/images/s-gym_logo.png" alt="SCORPION GYM" width="250" class="footer-logo">
+          <p>SCORPION GYM (ブラジリアン柔術・No-Gi)<br>〒563-0035 大阪府池田市豊島南2-8-16-A</p>
+        </div>
+        <div class="footer-links">
+          <h3>Menu</h3>
+          <ul><li><a href="index.html">HOME</a></li><li><a href="beginners.html">はじめての方へ</a></li><li><a href="pricing.html">クラス・料金</a></li><li><a href="instructors.html">インストラクター</a></li></ul>
+        </div>
+        <div class="footer-links">
+          <h3>About</h3>
+          <ul><li><a href="facility.html">施設案内</a></li><li><a href="access.html">アクセス・店舗情報</a></li><li><a href="faq.html">よくあるご質問</a></li><li><a href="contact.html" class="active">お問い合わせ・体験予約</a></li><li><a href="privacy.html">プライバシーポリシー</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 SCORPION GYM. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

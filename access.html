@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アクセス・店舗情報 | SCORPION GYM | 柔術・MMAジム</title>
+  <meta name="description" content="SCORPION GYMへのアクセス、および店舗情報をご案内します。駅徒歩5分の通いやすい立地です。">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .access-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    @media (min-width: 992px) {
+      .access-container {
+        flex-direction: row;
+      }
+      .access-map { width: 60%; }
+      .access-info { width: 40%; }
+    }
+    .access-map iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    @media (min-width: 992px) {
+      .access-map iframe { height: 100%; min-height: 500px; }
+    }
+    
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-radius: 8px;
+    }
+    .info-table th, .info-table td {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+    .info-table th {
+      width: 30%;
+      background-color: var(--gray);
+      font-weight: 700;
+    }
+    .info-table tr:last-child th, .info-table tr:last-child td {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body class="sub-page">
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/s-gym_logo.png" alt="SCORPION GYM Logo" width="180" decoding="async">
+        </a>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="global-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="beginners.html">はじめての方へ</a></li>
+          <li><a href="pricing.html">クラス・料金</a></li>
+          <li><a href="instructors.html">インストラクター</a></li>
+          <li><a href="facility.html">施設案内</a></li>
+          <li><a href="access.html" class="active">アクセス</a></li>
+          <li><a href="faq.html">よくあるご質問</a></li>
+        </ul>
+        <div class="nav-cta"><a href="contact.html" class="nav-btn">体験予約</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">アクセス</h1>
+        <p>ACCESS / INFO</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="access-container">
+          <div class="access-map">
+            <!-- Google Maps Embed for the exact address provided -->
+            <iframe src="https://maps.google.com/maps?q=大阪府池田市豊島南2-8-16-A&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          
+          <div class="access-info">
+            <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px;">SCORPION GYM</h2>
+            <table class="info-table">
+              <tr>
+                <th>住所</th>
+                <td>〒563-0035<br>大阪府池田市豊島南2-8-16-A</td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td>072-743-2822</td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>平日：10:00 - 22:00<br>土日祝：10:00 - 18:00</td>
+              </tr>
+              <tr>
+                <th>休館日</th>
+                <td>年末年始</td>
+              </tr>
+              <tr>
+                <th>駐車場</th>
+                <td>専用駐車場はございません。<br>恐れ入りますが近隣のコインパーキングをご利用ください（割引提携なし）。</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="contact.html#line" class="cta-btn btn-line"><i class="fa-brands fa-line"></i> LINE相談</a>
+    <a href="contact.html#reserve" class="cta-btn btn-reserve"><i class="fa-regular fa-calendar-check"></i> 体験予約</a>
+  </div>
+
+  <footer class="footer">
+    <!-- Same standard footer -->
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <img src="assets/images/s-gym_logo.png" alt="SCORPION GYM" width="250" class="footer-logo">
+          <p>SCORPION GYM (ブラジリアン柔術・No-Gi)<br>〒563-0035 大阪府池田市豊島南2-8-16-A</p>
+        </div>
+        <div class="footer-links">
+          <h3>Menu</h3>
+          <ul><li><a href="index.html">HOME</a></li><li><a href="beginners.html">はじめての方へ</a></li><li><a href="pricing.html">クラス・料金</a></li><li><a href="instructors.html">インストラクター</a></li></ul>
+        </div>
+        <div class="footer-links">
+          <h3>About</h3>
+          <ul><li><a href="facility.html">施設案内</a></li><li><a href="access.html" class="active">アクセス・店舗情報</a></li><li><a href="faq.html">よくあるご質問</a></li><li><a href="contact.html">お問い合わせ・体験予約</a></li><li><a href="privacy.html">プライバシーポリシー</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 SCORPION GYM. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

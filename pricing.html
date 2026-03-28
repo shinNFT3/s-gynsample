@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>クラス・料金 | SCORPION GYM | 柔術・MMAジム</title>
+  <meta name="description" content="SCORPION GYMの柔術、No-Giクラスの紹介と、明確な料金プランをご案内します。">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Specific styles for pricing table */
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pricing-table th, .pricing-table td {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    .pricing-table th {
+      background-color: var(--black);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .pricing-table tr:nth-child(even) { background-color: #fafafa; }
+    .price-value { font-size: 1.5rem; font-weight: 900; color: var(--primary); }
+    
+    .class-card {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width: 768px) {
+      .class-card { flex-direction: row; }
+      .class-img { width: 40%; }
+      .class-content { width: 60%; }
+    }
+    .class-img img { width: 100%; height: 100%; object-fit: cover; }
+    .class-content { padding: 30px; }
+    .class-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 15px; color: var(--black); border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+  </style>
+</head>
+<body class="sub-page">
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/s-gym_logo.png" alt="SCORPION GYM Logo" width="180" decoding="async">
+        </a>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="global-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="beginners.html">はじめての方へ</a></li>
+          <li><a href="pricing.html" class="active">クラス・料金</a></li>
+          <li><a href="instructors.html">インストラクター</a></li>
+          <li><a href="facility.html">施設案内</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="faq.html">よくあるご質問</a></li>
+        </ul>
+        <div class="nav-cta"><a href="contact.html" class="nav-btn">体験予約</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">クラス・料金</h1>
+        <p>CLASSES & PRICING</p>
+      </div>
+    </div>
+
+    <!-- Classes Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">クラス紹介</h2>
+        
+        <div class="class-card">
+          <div class="class-img">
+            <img src="assets/images/jiu.jpg" alt="ブラジリアン柔術">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">ブラジリアン柔術 (BJJ)</h3>
+            <p style="margin-bottom: 15px;">道着（ギ）を着用して行う組技格闘技です。打撃がなく、力よりもテコの原理やポジショニングの技術が重視されるため「体を使ったチェス」とも呼ばれます。男女問わず、年齢を重ねても続けやすいのが特徴です。</p>
+          </div>
+        </div>
+
+        <div class="class-card">
+          <div class="class-img">
+            <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=600&auto=format&fit=crop" alt="グラップリング/No-Gi">
+          </div>
+          <div class="class-content">
+            <h3 class="class-title">グラップリング / No-Gi</h3>
+            <p style="margin-bottom: 15px;">道着を着用せず、ラッシュガード等のウェアで行う組技格闘技です。道着を掴めないため、よりスピーディでレスリング要素が強いのが特徴です。MMAのベースとしても必須の技術体系を学びます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">料金システム</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>会員種別</th>
+                <th>月会費（税込）</th>
+                <th>ご利用条件</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>一般男性</td>
+                <td class="price-value">¥8,800</td>
+                <td>全てのクラスにご参加いただけます</td>
+              </tr>
+              <tr>
+                <td>学生(高校生〜)</td>
+                <td class="price-value">¥6,600</td>
+                <td>全てのクラスにご参加いただけます</td>
+              </tr>
+              <tr>
+                <td>女性</td>
+                <td class="price-value">¥6,600</td>
+                <td>全てのクラスにご参加いただけます</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="background: var(--white); padding: 25px; border-radius: 8px; border-left: 5px solid var(--primary);">
+            <h4 style="font-size: 1.1rem; margin-bottom: 10px;">入会時に必要なもの</h4>
+            <p style="margin-bottom: 15px; font-size: 0.95rem; color: var(--text);">
+              初回のみ月会費を2ヶ月分先払いとなります。3ヶ月目からは口座引き落としとなります。
+            </p>
+            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-light);">
+              <li>入会金：¥11,000</li>
+              <li>月会費：2ヶ月分</li>
+              <li>スポーツ保険料：¥2,000 / 年間（※いつ加入しても3月末で更新が必要です）</li>
+              <li>引き落とし銀行口座と印鑑</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section (Dynamic via JS) -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">週間スケジュール</h2>
+        <p class="text-center mb-4">祝日も通常通り営業しております（年末年始を除く）。</p>
+        <div class="schedule-container" id="schedule-container">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="contact.html#line" class="cta-btn btn-line"><i class="fa-brands fa-line"></i> LINE相談</a>
+    <a href="contact.html#reserve" class="cta-btn btn-reserve"><i class="fa-regular fa-calendar-check"></i> 体験予約</a>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <img src="assets/images/s-gym_logo.png" alt="SCORPION GYM" width="250" class="footer-logo">
+          <p>SCORPION GYM (ブラジリアン柔術・No-Gi)<br>〒563-0035 大阪府池田市豊島南2-8-16-A</p>
+          <div class="sns-links">
+            <a href="https://www.instagram.com/scorpion_gym" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="beginners.html">はじめての方へ</a></li>
+            <li><a href="pricing.html">クラス・料金</a></li>
+            <li><a href="instructors.html">インストラクター</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>About</h3>
+          <ul>
+            <li><a href="facility.html">施設案内</a></li>
+            <li><a href="access.html">アクセス・店舗情報</a></li>
+            <li><a href="faq.html">よくあるご質問</a></li>
+            <li><a href="contact.html">お問い合わせ・体験予約</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SCORPION GYM. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

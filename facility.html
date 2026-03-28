@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>施設案内 | SCORPION GYM | 柔術・MMAジム</title>
+  <meta name="description" content="広々としたマットスペース、充実したウェイト器具、清潔なシャワールームなど、SCORPION GYMの施設をご紹介します。">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: var(--white);
+      padding: 30px 20px 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    
+    .facility-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 30px;
+      background: var(--gray);
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .feature-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .feature-text h3 { margin-bottom: 5px; font-size: 1.2rem; }
+  </style>
+</head>
+<body class="sub-page">
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/s-gym_logo.png" alt="SCORPION GYM Logo" width="180" decoding="async">
+        </a>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="global-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="beginners.html">はじめての方へ</a></li>
+          <li><a href="pricing.html">クラス・料金</a></li>
+          <li><a href="instructors.html">インストラクター</a></li>
+          <li><a href="facility.html" class="active">施設案内</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="faq.html">よくあるご質問</a></li>
+        </ul>
+        <div class="nav-cta"><a href="contact.html" class="nav-btn">体験予約</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">施設案内</h1>
+        <p>FACILITY</p>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">安全と清潔を追求した空間</h2>
+        <div class="concept-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: stretch;">
+          <div class="facility-feature">
+            <div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="feature-text">
+              <h3>プロ仕様の特注マット</h3>
+              <p>衝撃吸収性に優れた厚みのあるジョイントレス・マットを採用。投げ技やタックルの際のダメージを最小限に抑えます。</p>
+            </div>
+          </div>
+          <div class="facility-feature">
+            <div class="feature-icon"><i class="fa-solid fa-door-closed"></i></div>
+            <div class="feature-text">
+              <h3>男女ロッカールーム完備</h3>
+              <p>清潔に保たれた男女別の更衣室・ロッカールームを完備しております。</p>
+            </div>
+          </div>
+          <div class="facility-feature">
+            <div class="feature-icon"><i class="fa-solid fa-dumbbell"></i></div>
+            <div class="feature-text">
+              <h3>ウェイトトレーニング設備</h3>
+              <p>フリーウェイトを中心に、格闘技に必要な筋力強化を行うための基本的な器具が揃っています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">フォト・ギャラリー</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1596357395217-80de13130e92?q=80&w=800&auto=format&fit=crop" alt="メインマット">
+            <div class="gallery-caption">メインマットスペース</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1549476464-37392f717541?q=80&w=800&auto=format&fit=crop" alt="サンドバッグ">
+            <div class="gallery-caption">サンドバッグエリア</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="ウェイトエリア">
+            <div class="gallery-caption">ウェイトトレーニングエリア</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800&auto=format&fit=crop" alt="ロッカー">
+            <div class="gallery-caption">男女別ロッカールーム</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=800&auto=format&fit=crop" alt="レンタル備品">
+            <div class="gallery-caption">レンタル道着・ギア（無料有）</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=800&auto=format&fit=crop" alt="受付">
+            <div class="gallery-caption">フロント・エントランス</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="contact.html#line" class="cta-btn btn-line"><i class="fa-brands fa-line"></i> LINE相談</a>
+    <a href="contact.html#reserve" class="cta-btn btn-reserve"><i class="fa-regular fa-calendar-check"></i> 体験予約</a>
+  </div>
+
+  <footer class="footer">
+    <!-- Same standard footer -->
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <img src="assets/images/s-gym_logo.png" alt="SCORPION GYM" width="250" class="footer-logo">
+          <p>SCORPION GYM (ブラジリアン柔術・No-Gi)<br>〒563-0035 大阪府池田市豊島南2-8-16-A</p>
+        </div>
+        <div class="footer-links">
+          <h3>Menu</h3>
+          <ul><li><a href="index.html">HOME</a></li><li><a href="beginners.html">はじめての方へ</a></li><li><a href="pricing.html">クラス・料金</a></li><li><a href="instructors.html">インストラクター</a></li></ul>
+        </div>
+        <div class="footer-links">
+          <h3>About</h3>
+          <ul><li><a href="facility.html">施設案内</a></li><li><a href="access.html">アクセス・店舗情報</a></li><li><a href="faq.html">よくあるご質問</a></li><li><a href="contact.html">お問い合わせ・体験予約</a></li><li><a href="privacy.html">プライバシーポリシー</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 SCORPION GYM. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
