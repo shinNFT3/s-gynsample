@@ -33,6 +33,40 @@
     .instructor-bio { color: var(--text); line-height: 1.8; margin-bottom: 20px; }
     .instructor-achievements h4 { font-size: 1rem; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 10px; }
     .instructor-achievements ul { padding-left: 20px; list-style-type: square; color: var(--text-light); font-size: 0.9rem; }
+    
+    .inst-ig {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: #fff !important;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      margin-left: 15px;
+      transition: transform 0.3s ease;
+      vertical-align: middle;
+    }
+    .inst-ig:hover { transform: scale(1.1); }
+    
+    /* On mobile, block display. On PC, flex to put IG next to name */
+    .instructor-name { 
+      font-size: 2rem; 
+      font-weight: 900; 
+      margin-bottom: 10px; 
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .instructor-name-texts { flex: 1; }
+    .instructor-name-texts span {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: var(--text-light);
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body class="sub-page">
@@ -51,7 +85,7 @@
           <li><a href="beginners.html">はじめての方へ</a></li>
           <li><a href="pricing.html">クラス・料金</a></li>
           <li><a href="instructors.html" class="active">インストラクター</a></li>
-          <li><a href="facility.html">施設案内</a></li>
+          <li><a href="schedule.html">スケジュール</a></li>
           <li><a href="access.html">アクセス</a></li>
           <li><a href="faq.html">よくあるご質問</a></li>
         </ul>
@@ -77,7 +111,10 @@
           </div>
           <div class="instructor-info">
             <div class="instructor-title">代表・ヘッドコーチ (柔術/No-Gi)</div>
-            <h2 class="instructor-name">恒冨 嘉徳 <span style="font-size:1.2rem; font-weight:normal;">Yoshinori Tsunetomi</span></h2>
+            <h2 class="instructor-name">
+              <div class="instructor-name-texts">恒冨 嘉徳 <span>Yoshinori Tsunetomi</span></div>
+              <a href="https://www.instagram.com/scorpion_gym?igsh=dnoycnhlNjdmdGN4" target="_blank" class="inst-ig"><i class="fa-brands fa-instagram"></i></a>
+            </h2>
             <div class="instructor-belt">ブラジリアン柔術 黒帯</div>
             <p class="instructor-bio">
               日本でのブラジリアン柔術の黎明期から携わり、普及活動を継続中。
@@ -98,7 +135,10 @@
           </div>
           <div class="instructor-info">
             <div class="instructor-title">副代表・スコーピオンジム千里代表</div>
-            <h2 class="instructor-name">須田 智行 <span style="font-size:1.2rem; font-weight:normal;">Tomoyuki Suda</span></h2>
+            <h2 class="instructor-name">
+              <div class="instructor-name-texts">須田 智行 <span>Tomoyuki Suda</span></div>
+              <a href="https://www.instagram.com/scorpiongym_senri_sudaconga?igsh=MXI1MDFhZ2RxZmI4aQ==" target="_blank" class="inst-ig"><i class="fa-brands fa-instagram"></i></a>
+            </h2>
             <div class="instructor-belt">ブラジリアン柔術 黒帯</div>
             <p class="instructor-bio">
               見た目と違い、温厚な性格。常に楽しい雰囲気を心がけてます。気軽に声をかけてください。
@@ -119,7 +159,9 @@
           </div>
           <div class="instructor-info">
             <div class="instructor-title">柔術コーチ</div>
-            <h2 class="instructor-name">村尾 誠一 <span style="font-size:1.2rem; font-weight:normal;">Seiichi Murao</span></h2>
+            <h2 class="instructor-name">
+              <div class="instructor-name-texts">村尾 誠一 <span>Seiichi Murao</span></div>
+            </h2>
             <div class="instructor-belt">ブラジリアン柔術 黒帯</div>
             <p class="instructor-bio">
               初心者に分かりやすいレッスンを心がけています。分からないことはどんどん聞いてください。
@@ -140,7 +182,9 @@
           </div>
           <div class="instructor-info">
             <div class="instructor-title">柔術・No-Giコーチ</div>
-            <h2 class="instructor-name">柿本 洋一郎 <span style="font-size:1.2rem; font-weight:normal;">Yoichiro Kakimoto</span></h2>
+            <h2 class="instructor-name">
+              <div class="instructor-name-texts">柿本 洋一郎 <span>Yoichiro Kakimoto</span></div>
+            </h2>
             <div class="instructor-belt">ブラジリアン柔術 紫帯</div>
             <p class="instructor-bio">
               初めての人でも技を覚えられるように繰り返しレッスンを行います。楽しい格闘技ライフを共有しましょう。
@@ -175,7 +219,7 @@
         <div class="footer-links">
           <h3>About</h3>
           <ul>
-            <li><a href="facility.html">施設案内</a></li>
+            <li><a href="schedule.html">スケジュール</a></li>
             <li><a href="access.html">アクセス・店舗情報</a></li>
             <li><a href="faq.html">よくあるご質問</a></li>
             <li><a href="contact.html">お問い合わせ・体験予約</a></li>

@@ -70,7 +70,7 @@
           <li><a href="beginners.html">はじめての方へ</a></li>
           <li><a href="pricing.html" class="active">クラス・料金</a></li>
           <li><a href="instructors.html">インストラクター</a></li>
-          <li><a href="facility.html">施設案内</a></li>
+          <li><a href="schedule.html">スケジュール</a></li>
           <li><a href="access.html">アクセス</a></li>
           <li><a href="faq.html">よくあるご質問</a></li>
         </ul>
@@ -162,13 +162,50 @@
       </div>
     </section>
 
-    <!-- Schedule Section (Dynamic via JS) -->
+    <!-- Drop-in and Personal Training Section -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">週間スケジュール</h2>
-        <p class="text-center mb-4">祝日も通常通り営業しております（年末年始を除く）。</p>
-        <div class="schedule-container" id="schedule-container">
-          <!-- Populated by script.js -->
+        <h2 class="section-title">その他のメニュー</h2>
+        
+        <div class="concept-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: stretch;">
+          
+          <!-- Drop-in (出稽古) -->
+          <div style="background: var(--white); padding: 40px 30px; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); border-top: 5px solid var(--black); height: 100%;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px;"><i class="fa-solid fa-person-walking-luggage" style="color:var(--primary); margin-right: 10px;"></i>出稽古について</h3>
+            <p style="color: #e74c3c; font-weight: bold; margin-bottom: 25px; font-size: 0.95rem;">※事前に連絡が必要、原則として当日は受付できません。</p>
+            
+            <div style="margin-bottom: 25px;">
+              <h4 style="font-size: 1.1rem; color: var(--text); border-left: 3px solid var(--primary); padding-left: 10px; margin-bottom: 10px;">当ジムと交流のある方</h4>
+              <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 10px;">ジム・道場・サークルに所属している選手、アクティブ会員の方</p>
+              <div style="font-size: 1.3rem; font-weight: bold; color: var(--primary);">1回 <span style="font-size: 1.8rem;">¥3,000</span></div>
+            </div>
+            
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--text); border-left: 3px solid var(--dark-gray); padding-left: 10px; margin-bottom: 10px;">以下のいずれかに該当する方</h4>
+              <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 10px;">・無所属の方<br>・上記以外の方</p>
+              <div style="font-size: 1.3rem; font-weight: bold; color: var(--primary);">1回 <span style="font-size: 1.8rem;">¥4,000</span></div>
+            </div>
+          </div>
+
+          <!-- Personal Training -->
+          <div style="background: var(--white); padding: 40px 30px; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); border-top: 5px solid var(--primary); height: 100%;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px; font-weight: 800; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px;"><i class="fa-solid fa-user-ninja" style="color:var(--primary); margin-right: 10px;"></i>パーソナルレッスン</h3>
+            <p style="margin-bottom: 15px; font-size: 0.95rem; color: var(--text);">マンツーマン及びグループでのレッスンをご希望の方<br><strong>完全予約制となります。</strong><br>（スコーピオンジム以外の方でも申し込み可能です）</p>
+            <p style="color: #e74c3c; font-weight: bold; margin-bottom: 25px; font-size: 0.9rem;">※ご希望の方は事前にスコーピオンジムまでお問合せください。（希望日時及び内容等ご相談ください）</p>
+            
+            <div style="margin-bottom: 25px;">
+              <h4 style="font-size: 1.1rem; color: var(--text); margin-bottom: 5px; font-weight: 800;">マンツーマンでの受講</h4>
+              <div style="font-size: 1.1rem; font-weight: bold; color: var(--primary);">1時間 <span style="font-size: 1.5rem;">¥8,000</span></div>
+              <p style="font-size: 0.85rem; color: var(--text-light); margin-top:5px;">以降30分毎に4,000円が加算されます。</p>
+            </div>
+            
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--text); margin-bottom: 5px; font-weight: 800;">2名以上のグループでの受講</h4>
+              <div style="font-size: 1.1rem; font-weight: bold; color: var(--primary);">1名につき 1時間 <span style="font-size: 1.5rem;">¥4,000</span></div>
+              <p style="font-size: 0.85rem; color: var(--text-light); margin-top:5px;">以降30分毎に2,000円/人が加算されます。</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -203,7 +240,7 @@
         <div class="footer-links">
           <h3>About</h3>
           <ul>
-            <li><a href="facility.html">施設案内</a></li>
+            <li><a href="schedule.html">スケジュール</a></li>
             <li><a href="access.html">アクセス・店舗情報</a></li>
             <li><a href="faq.html">よくあるご質問</a></li>
             <li><a href="contact.html">お問い合わせ・体験予約</a></li>
