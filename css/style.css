@@ -195,6 +195,7 @@ img, video {
   height: 20px;
   position: relative;
   z-index: 1010;
+  flex-shrink: 0;
 }
 .menu-btn span {
   display: block;
@@ -481,10 +482,11 @@ body.sub-page .header {
 }
 .page-title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.4rem, 5vw, 3rem);
   font-weight: 900;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 
