@@ -5,17 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menu-btn');
   const nav = document.getElementById('global-nav');
 
-  // Handle Video Autoplay failure (e.g. iOS Low Power Mode) to hide default play button
-  const mvVideo = document.querySelector('.video-container video');
-  if (mvVideo) {
-    const playPromise = mvVideo.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // Autoplay prevented by low power mode or browser policy.
-        // Hide the video entirely to remove the forced native play icon.
-        mvVideo.style.display = 'none';
-      });
-    }
+  // Hero Photo Slideshow
+  const slides = document.querySelectorAll('#hero-slideshow .slide');
+  if (slides.length > 0) {
+    let currentSlide = 0;
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 3000);
   }
 
   window.addEventListener('scroll', () => {
