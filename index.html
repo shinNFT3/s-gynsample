@@ -68,9 +68,14 @@
     <!-- Photo Slideshow MV Section -->
     <section class="video-mv">
       <div class="video-container slideshow-container" id="hero-slideshow">
-        <div class="slide active"><img src="assets/images/IMG_5624.jpg" alt="SCORPION GYM" style="object-position: center center;"></div>
-        <div class="slide"><img src="assets/images/IMG_5623.jpg" alt="SCORPION GYM" style="object-position: center 10%;"></div>
-        <div class="slide"><img src="assets/images/IMG_5625.jpg" alt="SCORPION GYM" style="object-position: center 35%;"></div>
+        <!-- Desktop slides (5628→5629→5630) -->
+        <div class="slide slide-desktop active" data-group="desktop"><img src="assets/images/IMG_5628.jpg" alt="SCORPION GYM" style="object-position: center center;"></div>
+        <div class="slide slide-desktop" data-group="desktop"><img src="assets/images/IMG_5629.jpg" alt="SCORPION GYM" style="object-position: center center;"></div>
+        <div class="slide slide-desktop" data-group="desktop"><img src="assets/images/IMG_5630.jpg" alt="SCORPION GYM" style="object-position: center center;"></div>
+        <!-- Mobile slides (5623→5627→5631) -->
+        <div class="slide slide-mobile" data-group="mobile" style="display:none;"><img src="assets/images/IMG_5623.jpg" alt="SCORPION GYM" style="object-position: center 10%;"></div>
+        <div class="slide slide-mobile" data-group="mobile" style="display:none;"><img src="assets/images/IMG_5627.jpg" alt="SCORPION GYM" style="object-position: center center;"></div>
+        <div class="slide slide-mobile" data-group="mobile" style="display:none;"><img src="assets/images/IMG_5631.jpg" alt="SCORPION GYM" style="object-position: center center;"></div>
         <div class="video-overlay"></div>
       </div>
       <div class="mv-content">
@@ -80,6 +85,30 @@
         </h1>
         <p class="mv-sub">ブラジリアン柔術・No-Gi<br>全くの未経験でも、明日から別人になれる。</p>
         <a href="beginners.html" class="btn btn-primary mt-4">はじめての方へ</a>
+      </div>
+    </section>
+
+    <!-- NEWS Section -->
+    <section class="section bg-light" style="padding: 60px 0;">
+      <div class="container">
+        <h2 class="section-title" style="margin-bottom: 2rem;">NEWS</h2>
+        <ul style="list-style:none; padding:0; margin:0; max-width:800px; margin:0 auto;">
+          <li style="display:flex; gap:20px; align-items:baseline; padding:18px 0; border-bottom:1px solid #e0e0e0;">
+            <span style="font-size:0.85rem; color:var(--text-light); white-space:nowrap;">2026.04.01</span>
+            <span style="font-size:0.8rem; background:var(--primary); color:#fff; padding:2px 8px; border-radius:20px; white-space:nowrap;">新着</span>
+            <span style="font-size:1rem;">ホームページをリニューアルしました</span>
+          </li>
+          <li style="display:flex; gap:20px; align-items:baseline; padding:18px 0; border-bottom:1px solid #e0e0e0;">
+            <span style="font-size:0.85rem; color:var(--text-light); white-space:nowrap;">2026.03.15</span>
+            <span style="font-size:0.8rem; background:#555; color:#fff; padding:2px 8px; border-radius:20px; white-space:nowrap;">お知らせ</span>
+            <span style="font-size:1rem;">春の体験無料キャンペーンを実施中です</span>
+          </li>
+          <li style="display:flex; gap:20px; align-items:baseline; padding:18px 0;">
+            <span style="font-size:0.85rem; color:var(--text-light); white-space:nowrap;">2026.02.10</span>
+            <span style="font-size:0.8rem; background:#555; color:#fff; padding:2px 8px; border-radius:20px; white-space:nowrap;">イベント</span>
+            <span style="font-size:1rem;">第1回スパーリング大会を開催しました</span>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -152,16 +181,6 @@
       </div>
     </section>
 
-    <!-- Latest News (Instagram Grid) -->
-    <section class="section news-section bg-light">
-      <div class="container">
-        <h2 class="section-title">Latest News</h2>
-        <p class="text-center mb-4">道場の最新の雰囲気やクラスの様子はInstagramでチェック！</p>
-        <div class="instagram-grid" id="instagram-grid">
-          <!-- Populated via script.js -->
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Sticky CTA (Mobile Default, visible on scroll) -->

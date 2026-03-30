@@ -5,15 +5,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menu-btn');
   const nav = document.getElementById('global-nav');
 
-  // Hero Photo Slideshow
-  const slides = document.querySelectorAll('#hero-slideshow .slide');
-  if (slides.length > 0) {
-    let currentSlide = 0;
+  // Hero Photo Slideshow (desktop: 5628→5629→5630, mobile: 5623→5627→5631)
+  const heroEl = document.getElementById('hero-slideshow');
+  if (heroEl) {
+    const desktopSlides = Array.from(heroEl.querySelectorAll('.slide-desktop'));
+    const mobileSlides  = Array.from(heroEl.querySelectorAll('.slide-mobile'));
+
+    function initSlideshow() {
+      const isMobile = window.innerWidth <= 768;
+      // Show/hide correct group
+      desktopSlides.forEach(s => { s.style.display = isMobile ? 'none' : ''; });
+      mobileSlides.forEach(s  => { s.style.display = isMobile ? '' : 'none'; });
+      const activeGroup = isMobile ? mobileSlides : desktopSlides;
+      // Reset active class within the visible group
+      activeGroup.forEach(s => s.classList.remove('active'));
+      if (activeGroup.length > 0) activeGroup[0].classList.add('active');
+    }
+
+    initSlideshow();
+    window.addEventListener('resize', initSlideshow);
+
+    let current = 0;
     setInterval(() => {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }, 8000);
+      const isMobile = window.innerWidth <= 768;
+      const slides = isMobile ? mobileSlides : desktopSlides;
+      slides[current % slides.length].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 6000);
   }
 
   window.addEventListener('scroll', () => {
