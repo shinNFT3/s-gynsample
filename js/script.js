@@ -26,13 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', initSlideshow);
 
     let current = 0;
-    setInterval(() => {
+    function nextSlide() {
       const isMobile = window.innerWidth <= 768;
       const slides = isMobile ? mobileSlides : desktopSlides;
-      slides[current % slides.length].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 6000);
+      if (slides.length > 0) {
+        slides[current % slides.length].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }
+      setTimeout(nextSlide, isMobile ? 3000 : 6000);
+    }
+    setTimeout(nextSlide, window.innerWidth <= 768 ? 3000 : 6000);
   }
 
   window.addEventListener('scroll', () => {
