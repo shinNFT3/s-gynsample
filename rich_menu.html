@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>LINEリッチメニュー画像生成</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  }
+  /* ここから下がピッタリ 2500x1686 の領域です */
+  .rich-menu {
+    width: 2500px;
+    height: 1686px;
+    background-color: #111;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px; /* 分割線の幅 */
+    padding: 8px; /* 全体の外枠 */
+    box-sizing: border-box;
+    /* 外枠のグリーンのライン */
+    border: 10px solid #06C755; 
+  }
+  .menu-btn {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 140px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 5px;
+    border: 4px solid #333;
+    transition: 0.3s;
+  }
+  /* 各ボタンの色分け（少しだけ緑のアクセント） */
+  .menu-btn:nth-child(1) { border-bottom: 20px solid #06C755; }
+  .menu-btn:nth-child(2) { border-bottom: 20px solid #06C755; }
+  .menu-btn:nth-child(3) { border-bottom: 20px solid #06C755; }
+  .menu-btn:nth-child(4) { border-bottom: 20px solid #06C755; }
+  
+  /* 念のための案内用テキスト */
+  .instruction {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    border: 2px solid #06C755;
+    z-index: 100;
+  }
+</style>
+</head>
+<body>
+
+<div class="instruction">
+  この画面はピッタリ「2500×1686」のサイズで作られています。<br>
+  画面の縮小表示（ブラウザのズーム：25%など）を活用し、<br>
+  この四角形を「スクリーンショット」で撮影すれば、そのままリッチメニューの画像として使えます。
+</div>
+
+<div class="rich-menu">
+  <div class="menu-btn">体験予約</div>
+  <div class="menu-btn">出稽古</div>
+  <div class="menu-btn">パーソナル</div>
+  <div class="menu-btn">既存会員</div>
+</div>
+
+</body>
+</html>

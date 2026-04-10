@@ -90,10 +90,11 @@
         <h2 class="section-title" id="reserve">メールフォーム</h2>
         
         <div class="contact-wrapper">
-          <form action="#" method="POST">
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+          <form action="https://docs.google.com/forms/d/e/1FAIpQLSc4LeDMGZ1sTKJkPAhFxkXvqx8WD2iW_kfYyY9ObFSJ4Bj9nQ/formResponse" method="POST" target="hidden_iframe" id="contact-form">
             <div class="form-group">
               <label class="form-label">お問い合わせの種類 <span class="required">必須</span></label>
-              <select class="form-control" required>
+              <select name="entry.272347142" class="form-control" required>
                 <option value="">選択してください</option>
                 <option value="体験予約">体験予約</option>
                 <option value="見学希望">見学希望</option>
@@ -103,31 +104,73 @@
             </div>
             <div class="form-group">
               <label class="form-label">お名前 <span class="required">必須</span></label>
-              <input type="text" class="form-control" placeholder="例：山田 太郎" required>
+              <input type="text" name="entry.1108017030" class="form-control" placeholder="例：山田 太郎" required>
             </div>
             <div class="form-group">
               <label class="form-label">メールアドレス <span class="required">必須</span></label>
-              <input type="email" class="form-control" placeholder="例：example@s-gym.com" required>
+              <input type="email" name="entry.1426945224" class="form-control" placeholder="例：example@s-gym.com" required>
             </div>
             <div class="form-group">
               <label class="form-label">電話番号</label>
-              <input type="tel" class="form-control" placeholder="例：03-0000-0000">
+              <input type="tel" name="entry.2143254324" class="form-control" placeholder="例：03-0000-0000">
             </div>
             <div class="form-group">
               <label class="form-label">ご希望の日時（体験・見学の方）</label>
-              <input type="text" class="form-control" placeholder="例：4月1日 20:00〜 柔術クラス希望">
+              <input type="text" name="entry.349938576" class="form-control" placeholder="例：4月1日 20:00〜 柔術クラス希望">
             </div>
             <div class="form-group">
               <label class="form-label">お問い合わせ内容 <span class="required">必須</span></label>
-              <textarea class="form-control" placeholder="ご質問や格闘技の経験の有無など、ご自由にお書きください。" required></textarea>
+              <textarea name="entry.1953010834" class="form-control" placeholder="ご質問や格闘技の経験の有無など、ご自由にお書きください。" required></textarea>
             </div>
             <div class="text-center mt-4">
               <p style="font-size: 0.85rem; margin-bottom: 20px; color: var(--text-light);">
                 送信ボタンを押すことで、当ジムの<a href="privacy.html" style="text-decoration:underline; color:var(--primary);">プライバシーポリシー</a>に同意したものとみなします。
               </p>
-              <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px;">内容を送信する</button>
+              <p id="validation-hint" style="font-size: 0.9rem; color: #d32f2f; font-weight: 600; margin-bottom: 15px; letter-spacing: 0.5px; display: none;">
+                <i class="fa-solid fa-circle-info" style="margin-right: 5px;"></i>必須項目がすべて入力されていない場合、送信ボタンは押せません。
+              </p>
+              <button type="submit" class="btn btn-primary btn-submit" style="width: 100%; max-width: 300px;">内容を送信する</button>
             </div>
           </form>
+          
+          <script>
+            let submitted = false;
+            const form = document.getElementById('contact-form');
+            const submitBtn = document.querySelector('.btn-submit');
+            const validationHint = document.getElementById('validation-hint');
+            
+            function checkFormValidation() {
+              if (form.checkValidity()) {
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+                submitBtn.style.cursor = 'pointer';
+                validationHint.style.display = 'none';
+              } else {
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.5';
+                submitBtn.style.cursor = 'not-allowed';
+                validationHint.style.display = 'block';
+              }
+            }
+
+            checkFormValidation();
+            form.addEventListener('input', checkFormValidation);
+            form.addEventListener('change', checkFormValidation);
+
+            form.addEventListener('submit', function() {
+              submitBtn.textContent = '送信中...';
+              submitBtn.style.opacity = '0.7';
+              submitBtn.disabled = true;
+              submitted = true;
+            });
+
+            document.getElementById('hidden_iframe').onload = function() {
+              if (submitted) {
+                alert('お問い合わせありがとうございます。担当者より改めてご連絡いたします。');
+                window.location.href = 'index.html';
+              }
+            };
+          </script>
         </div>
       </div>
     </section>

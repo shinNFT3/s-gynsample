@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>入会登録書 | SCORPION GYM | 柔術・MMAジム</title>
+  <meta name="description" content="SCORPION GYMへご入会いただくための登録フォームです。">
+  <!-- Fonts and Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/0405.png">
+  
+  <style>
+    /* フォーム用特別スタイル */
+    .registration-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--white);
+      padding: 50px 40px;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    .registration-title {
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 5px;
+      margin-bottom: 40px;
+      font-weight: 700;
+      color: #333;
+    }
+    .registration-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 2px solid #333;
+    }
+    .registration-table th, .registration-table td {
+      border: 1px solid #333;
+      padding: 15px;
+      vertical-align: middle;
+    }
+    .registration-table th {
+      width: 25%;
+      background-color: #f9f9f9;
+      font-weight: 600;
+      text-align: center;
+    }
+    
+    /* フォームコントロール部品 */
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    .flex-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .date-input {
+      width: 80px;
+      text-align: right;
+    }
+    .gender-radio {
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .gender-label {
+      margin-right: 15px;
+      cursor: pointer;
+    }
+    
+    .note-text {
+      font-size: 0.8rem;
+      color: #e53935;
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .submit-btn-wrapper {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .btn-submit {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 15px 60px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn-submit:hover {
+      background: #b71c1c;
+    }
+
+    /* ふりがな部分などのレイアウト用 */
+    .furigana-label {
+      font-size: 0.75rem;
+      color: #666;
+      margin-bottom: 5px;
+      display: block;
+    }
+    
+    @media (max-width: 768px) {
+      .registration-table, .registration-table tbody, .registration-table tr, .registration-table td, .registration-table th {
+        display: block;
+        width: 100%;
+      }
+      .registration-table th {
+        border-bottom: none;
+        background-color: #eee;
+        text-align: left;
+      }
+      .registration-table td {
+        border-top: none;
+        margin-bottom: -1px;
+      }
+      .registration-wrapper {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body class="sub-page">
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo"><a href="index.html"><img src="assets/images/s-gym_logo.png" alt="SCORPION GYM Logo" width="180" decoding="async"></a></div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="global-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="beginners.html">はじめての方へ</a></li>
+          <li><a href="pricing.html">クラス・料金</a></li>
+          <li><a href="instructors.html">インストラクター</a></li>
+          <li><a href="schedule.html">スケジュール</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="faq.html">よくあるご質問</a></li>
+        </ul>
+        <div class="nav-cta"><a href="contact.html" class="nav-btn">体験予約</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header" style="padding-bottom: 30px;">
+      <div class="container">
+      </div>
+    </div>
+
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        
+        <div class="registration-wrapper">
+          <h1 class="registration-title">入会登録書</h1>
+          
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+          <form id="registration-form" action="https://docs.google.com/forms/d/e/1FAIpQLScjJI8YxJpsXcloAQEn4Uxqua1LbHaUsz8ymXlPQn4t0kxw1A/formResponse" method="POST" target="hidden_iframe">
+            <input type="hidden" name="entry.1666476001" id="combined_address">
+            
+            <table class="registration-table">
+              <tbody>
+                <!-- 入会年月日 -->
+                <tr>
+                  <th>入会年月日(西暦)</th>
+                  <td colspan="2">
+                    <div class="flex-group">
+                      <input type="number" id="join_y" name="entry.1702891434_year" class="form-input date-input" placeholder="2024" required> 年
+                      <input type="number" id="join_m" name="entry.1702891434_month" class="form-input date-input" placeholder="1" required> 月
+                      <input type="number" id="join_d" name="entry.1702891434_day" class="form-input date-input" placeholder="1" required> 日
+                    </div>
+                  </td>
+                </tr>
+                
+                <!-- 住所 -->
+                <tr>
+                  <th>住 所</th>
+                  <td colspan="2">
+                    <div style="margin-bottom: 10px; display: flex; align-items: center;">
+                      <span style="font-size: 1.2rem; margin-right: 10px;">〒</span>
+                      <input type="text" id="zipcode" class="form-input" style="width: 150px;" placeholder="000-0000" required>
+                    </div>
+                    <input type="text" id="address" class="form-input" placeholder="都道府県・市区町村・番地・建物名" required>
+                  </td>
+                </tr>
+                
+                <!-- 氏名・性別 -->
+                <tr>
+                  <th>
+                    <span class="furigana-label">ふりがな</span>
+                    氏 名 (性別)
+                  </th>
+                  <td style="border-right: none;">
+                    <div style="margin-bottom: 10px;">
+                      <span class="furigana-label">ふりがな</span>
+                      <input type="text" id="furigana" name="entry.1338751800" class="form-input" placeholder="やまだ たろう" required>
+                    </div>
+                    <div>
+                      <input type="text" id="fullname" name="entry.655285341" class="form-input" placeholder="山田 太郎" required>
+                    </div>
+                  </td>
+                  <td style="width: 15%; text-align: center; border-left: 1px dashed #ccc;">
+                    <div style="display:flex; flex-direction:column; gap:10px; align-items:center;">
+                      <label class="gender-label"><input type="radio" name="entry.1316802332" value="男" class="gender-radio" required> 男</label>
+                      <label class="gender-label"><input type="radio" name="entry.1316802332" value="女" class="gender-radio" required> 女</label>
+                    </div>
+                  </td>
+                </tr>
+                
+                <!-- 生年月日 -->
+                <tr>
+                  <th>生年月日(西暦)</th>
+                  <td colspan="2">
+                    <div class="flex-group">
+                      <input type="number" id="dob_y" name="entry.735319977_year" class="form-input date-input" placeholder="1990" required> 年
+                      <input type="number" id="dob_m" name="entry.735319977_month" class="form-input date-input" placeholder="1" required> 月
+                      <input type="number" id="dob_d" name="entry.735319977_day" class="form-input date-input" placeholder="1" required> 日
+                    </div>
+                  </td>
+                </tr>
+                
+                <!-- 連絡先 -->
+                <tr>
+                  <th>連 絡 先</th>
+                  <td colspan="2">
+                    <div class="flex-group">
+                      <input type="tel" id="phone" name="entry.860503570" class="form-input" style="width:250px;" placeholder="090-0000-0000" required>
+                    </div>
+                  </td>
+                </tr>
+                
+                <!-- 緊急連絡先 -->
+                <tr>
+                  <th>緊急連絡先<br><span style="font-size:0.75rem; font-weight:normal;">※本人以外の連絡先</span></th>
+                  <td style="border-right: none;">
+                    <div class="flex-group">
+                      <input type="tel" id="em_phone" name="entry.1554102163" class="form-input" style="width:250px;" placeholder="090-0000-0000" required>
+                    </div>
+                  </td>
+                  <td style="width: 25%; text-align: center; border-left: 1px dashed #ccc; vertical-align: top;">
+                    <span class="furigana-label">(続柄)</span>
+                    <input type="text" id="em_relation" name="entry.322805785" class="form-input" placeholder="例：父 / 妻" style="width: 90%;" required>
+                  </td>
+                </tr>
+                
+                <!-- 格闘技歴 -->
+                <tr>
+                  <th>格闘技歴及び戦績</th>
+                  <td colspan="2">
+                    <span class="note-text">※柔道の段位やレスリング、アマチュアMMAの経験などは過去の事であっても必ず記入する事。</span>
+                    <textarea id="history" name="entry.130905339" class="form-input" rows="5" placeholder="例：柔道 初段（中学〜高校）、ブラジリアン柔術 白帯 約1年" required></textarea>
+                  </td>
+                </tr>
+                
+                <!-- 備考 -->
+                <tr>
+                  <th>備 考</th>
+                  <td colspan="2">
+                    <textarea id="notes" name="entry.578702876" class="form-input" rows="4" placeholder="特になければ「なし」とご記入ください。" required></textarea>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+            
+            <div class="submit-btn-wrapper">
+              <p id="validation-hint" style="font-size: 0.9rem; color: #d32f2f; font-weight: 600; margin-bottom: 15px; letter-spacing: 0.5px;">
+                <i class="fa-solid fa-circle-info" style="margin-right: 5px;"></i>空欄が一つでもある場合、送信ボタンは押せません。
+              </p>
+              <button type="submit" class="btn-submit">登録内容を送信・保存する</button>
+            </div>
+            
+          </form>
+
+          <script>
+            let submitted = false;
+            const form = document.getElementById('registration-form');
+            const submitBtn = document.querySelector('.btn-submit');
+            const validationHint = document.getElementById('validation-hint');
+            
+            // 初期状態は送信不可
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.5';
+            submitBtn.style.cursor = 'not-allowed';
+
+            // 入力状態を監視して全項目チェック
+            form.addEventListener('input', function() {
+              if (form.checkValidity()) {
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+                submitBtn.style.cursor = 'pointer';
+                validationHint.style.display = 'none';
+              } else {
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.5';
+                submitBtn.style.cursor = 'not-allowed';
+                validationHint.style.display = 'block';
+              }
+            });
+
+            form.addEventListener('submit', function() {
+              // 住所と郵便番号だけは合体させる必要があるためここでセット
+              const zip = document.getElementById('zipcode').value;
+              const addr = document.getElementById('address').value;
+              document.getElementById('combined_address').value = '〒' + zip + ' ' + addr;
+              
+              submitBtn.textContent = '送信中...';
+              submitBtn.style.opacity = '0.7';
+              submitBtn.disabled = true;
+              submitted = true;
+            });
+
+            // 送信完了（裏側のiframeが読み込まれた）時の処理
+            document.getElementById('hidden_iframe').onload = function() {
+              if (submitted) {
+                alert('ご入会登録が完了しました。ご回答ありがとうございます！');
+                window.location.href = 'index.html';
+              }
+            };
+          </script>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mt-5">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <img src="assets/images/s-gym_logo.png" alt="SCORPION GYM" width="250" class="footer-logo">
+          <p>SCORPION GYM (ブラジリアン柔術・No-Gi)<br>〒563-0035 大阪府池田市豊島南2-8-16-A</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 SCORPION GYM. All rights reserved.</p></div>
+    </div>
+  </footer>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
