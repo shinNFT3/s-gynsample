@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;600;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="assets/images/0405.png">
   <style>
@@ -17,34 +20,38 @@
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 20px;
     }
+
     .gallery-item {
       position: relative;
       border-radius: 8px;
       overflow: hidden;
       aspect-ratio: 4/3;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
+
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.3s ease;
     }
+
     .gallery-item:hover img {
       transform: scale(1.05);
     }
+
     .gallery-caption {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
       color: var(--white);
       padding: 30px 20px 15px;
       font-weight: 600;
       font-size: 1.1rem;
     }
-    
+
     .facility-feature {
       display: flex;
       align-items: flex-start;
@@ -54,152 +61,261 @@
       padding: 20px;
       border-radius: 8px;
     }
+
     .feature-icon {
       font-size: 2rem;
       color: var(--primary);
       flex-shrink: 0;
     }
-    .feature-text h3 { margin-bottom: 5px; font-size: 1.2rem; }
-    
+
+    .feature-text h3 {
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+    }
+
     /* Schedule HTML Table Styles */
     .schedule-table-wrapper {
-        width: 100%;
-        max-width: 1100px;
-        margin: 0 auto;
-        border: 3px solid #000;
-        padding: 30px;
-        background-color: #ffffff;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        border-radius: 4px;
-        box-sizing: border-box;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      border: 3px solid #000;
+      padding: 30px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      box-sizing: border-box;
     }
+
     .schedule-table-wrapper h2 {
-        text-align: center;
-        color: #ffffff;
-        background-color: #e60012;
-        padding: 15px;
-        margin: 0 0 30px 0;
-        font-size: 28px;
-        letter-spacing: 5px;
-        border-radius: 2px;
-        text-transform: uppercase;
-        font-weight: 900;
+      text-align: center;
+      color: #ffffff;
+      background-color: #e60012;
+      padding: 15px;
+      margin: 0 0 30px 0;
+      font-size: 28px;
+      letter-spacing: 5px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      font-weight: 900;
     }
+
     .schedule-table-wrapper .table-responsive {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
+
     .schedule-table-wrapper table {
-        width: 100%;
-        min-width: 700px; /* Force minimum width to prevent squishing on mobile */
-        border-collapse: separate;
-        border-spacing: 0;
-        table-layout: fixed;
+      width: 100%;
+      min-width: 700px;
+      /* Force minimum width to prevent squishing on mobile */
+      border-collapse: separate;
+      border-spacing: 0;
+      table-layout: fixed;
     }
-    .schedule-table-wrapper th, .schedule-table-wrapper td {
-        padding: 12px 8px;
-        text-align: center;
-        border: 1px solid #ddd;
+
+    .schedule-table-wrapper th,
+    .schedule-table-wrapper td {
+      padding: 12px 8px;
+      text-align: center;
+      border: 1px solid #ddd;
     }
+
     .schedule-table-wrapper th {
-        background-color: #000;
-        color: #ffffff;
-        font-weight: bold;
-        font-size: 16px;
+      background-color: #000;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 16px;
     }
+
     .schedule-table-wrapper .time-col {
-        width: 120px;
-        background-color: #f2f2f2;
-        font-weight: bold;
-        color: #000;
-        font-size: 14px;
-        border-right: 2px solid #000;
-        /* 横スクロール時に TIME 列を固定 */
-        position: sticky;
-        left: 0;
-        z-index: 2;
+      width: 120px;
+      background-color: #f2f2f2;
+      font-weight: bold;
+      color: #000;
+      font-size: 14px;
+      border-right: 2px solid #000;
+      /* 横スクロール時に TIME 列を固定 */
+      position: sticky;
+      left: 0;
+      z-index: 2;
     }
+
     /* ヘッダー行の TIME セルはさらに上に重なるように */
     .schedule-table-wrapper thead th.time-col {
-        z-index: 3;
-        background-color: #000;
-        color: #fff;
+      z-index: 3;
+      background-color: #000;
+      color: #fff;
     }
+
     .schedule-table-wrapper .class-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-        min-height: 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      min-height: 45px;
     }
+
     .schedule-table-wrapper .class-name {
-        font-weight: bold;
-        font-size: 15px;
-        line-height: 1.4;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 1.4;
     }
-    .schedule-table-wrapper tbody tr { height: 70px; }
-    
-    .schedule-table-wrapper .bg-open { background-color: #f0f0f0; color: #333; }
-    .schedule-table-wrapper .bg-jiujitsu-beginner { background-color: #ffe6e6; color: #e60012; border-left: 4px solid #e60012; }
-    .schedule-table-wrapper .bg-jiujitsu-all { background-color: #ffd9d9; color: #e60012; border-left: 4px solid #e60012; }
-    .schedule-table-wrapper .bg-jiujitsu-spar { background-color: #e60012; color: #ffffff; border-left: 4px solid #b3000f; }
-    .schedule-table-wrapper .bg-nogi-all { background-color: #e6e6e6; color: #000; border-left: 4px solid #000; }
-    .schedule-table-wrapper .bg-nogi-spar { background-color: #333; color: #ffffff; border-left: 4px solid #000; }
-    .schedule-table-wrapper .bg-reset { background-color: #ffffff; color: #999; font-style: italic; }
-    .schedule-table-wrapper .bg-training { background-color: #fff9e6; color: #b38600; border-left: 4px solid #cc9900; }
-    .schedule-table-wrapper .empty { background-color: #ffffff; color: #eee; }
-    .schedule-table-wrapper .reset-text { font-size: 12px; }
+
+    .schedule-table-wrapper tbody tr {
+      height: 70px;
+    }
+
+    .schedule-table-wrapper .bg-open {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .schedule-table-wrapper .bg-jiujitsu-beginner {
+      background-color: #ffe6e6;
+      color: #e60012;
+      border-left: 4px solid #e60012;
+    }
+
+    .schedule-table-wrapper .bg-jiujitsu-all {
+      background-color: #ffd9d9;
+      color: #e60012;
+      border-left: 4px solid #e60012;
+    }
+
+    .schedule-table-wrapper .bg-jiujitsu-spar {
+      background-color: #e60012;
+      color: #ffffff;
+      border-left: 4px solid #b3000f;
+    }
+
+    .schedule-table-wrapper .bg-nogi-all {
+      background-color: #e6e6e6;
+      color: #000;
+      border-left: 4px solid #000;
+    }
+
+    .schedule-table-wrapper .bg-nogi-spar {
+      background-color: #333;
+      color: #ffffff;
+      border-left: 4px solid #000;
+    }
+
+    .schedule-table-wrapper .bg-reset {
+      background-color: #ffffff;
+      color: #999;
+      font-style: italic;
+    }
+
+    .schedule-table-wrapper .bg-training {
+      background-color: #fff9e6;
+      color: #b38600;
+      border-left: 4px solid #cc9900;
+    }
+
+    .schedule-table-wrapper .empty {
+      background-color: #ffffff;
+      color: #eee;
+    }
+
+    .schedule-table-wrapper .reset-text {
+      font-size: 12px;
+    }
+
     /* 不要になったハードコード色用クラスを削除し、親要素の色継承に委ねます */
-    
+
     /* Description Legends */
     .class-descriptions {
-        margin-top: 25px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        background: #fbfbfb;
-        padding: 20px;
-        border-radius: 6px;
-        border: 1px solid #eee;
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #fbfbfb;
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid #eee;
     }
+
     .desc-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
     }
+
     .desc-color {
-        width: 24px;
-        height: 24px;
-        border-radius: 4px;
-        flex-shrink: 0;
-        border: 1px solid #ccc;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      border: 1px solid #ccc;
     }
+
     .desc-text p {
-        margin: 0;
-        font-size: 14px;
-        line-height: 1.5;
-        color: #333;
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #333;
     }
+
     .desc-text h4 {
-        margin: 0 0 4px 0;
-        font-size: 15px;
-        color: #000;
+      margin: 0 0 4px 0;
+      font-size: 15px;
+      color: #000;
     }
-    .desc-color.free-mat { background-color: #f0f0f0; border-color: #ccc; }
-    .desc-color.sparring { background: linear-gradient(135deg, #e60012 50%, #333 50%); border-color: #333; }
-    .desc-color.jiujitsu-all { background-color: #ffd9d9; border-left: 3px solid #e60012; border-color: #ffd9d9; }
-    .desc-color.nogi-all { background-color: #e6e6e6; border-left: 3px solid #000; border-color: #e6e6e6; }
-    .desc-color.jiujitsu-beginner { background-color: #ffe6e6; border-left: 3px solid #e60012; border-color: #ffe6e6; }
-    .desc-color.reset { background-color: #ffffff; border: 1px dashed #999; }
+
+    .desc-color.free-mat {
+      background-color: #f0f0f0;
+      border-color: #ccc;
+    }
+
+    .desc-color.sparring {
+      background: linear-gradient(135deg, #e60012 50%, #333 50%);
+      border-color: #333;
+    }
+
+    .desc-color.jiujitsu-all {
+      background-color: #ffd9d9;
+      border-left: 3px solid #e60012;
+      border-color: #ffd9d9;
+    }
+
+    .desc-color.nogi-all {
+      background-color: #e6e6e6;
+      border-left: 3px solid #000;
+      border-color: #e6e6e6;
+    }
+
+    .desc-color.jiujitsu-beginner {
+      background-color: #ffe6e6;
+      border-left: 3px solid #e60012;
+      border-color: #ffe6e6;
+    }
+
+    .desc-color.reset {
+      background-color: #ffffff;
+      border: 1px dashed #999;
+    }
 
     @media (max-width: 768px) {
-        .schedule-table-wrapper { padding: 15px; border-width: 2px; }
-        .schedule-table-wrapper h2 { font-size: 20px; letter-spacing: 2px; padding: 10px; margin: 0 0 15px 0; }
-        .scroll-hint { display: block !important; }
+      .schedule-table-wrapper {
+        padding: 15px;
+        border-width: 2px;
+      }
+
+      .schedule-table-wrapper h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        padding: 10px;
+        margin: 0 0 15px 0;
+      }
+
+      .scroll-hint {
+        display: block !important;
+      }
     }
   </style>
 </head>
+
 <body class="sub-page">
 
   <header class="header">
@@ -238,183 +354,250 @@
       <div class="container">
         <div class="schedule-table-wrapper">
           <h2>Academy Schedule</h2>
-          <div class="scroll-hint" style="text-align: right; font-size: 12px; color: #666; margin-bottom: 5px; display: none;">※表は左右にスクロールできます <i class="fa-solid fa-arrows-left-right"></i></div>
+          <div class="scroll-hint"
+            style="text-align: right; font-size: 12px; color: #666; margin-bottom: 5px; display: none;">※表は左右にスクロールできます
+            <i class="fa-solid fa-arrows-left-right"></i></div>
           <div class="table-responsive">
             <table>
-                <thead>
-                    <tr>
-                        <th class="time-col">TIME</th>
-                        <th>MON</th>
-                        <th>TUE</th>
-                        <th>WED</th>
-                        <th>THU</th>
-                        <th>FRI</th>
-                        <th>SAT</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Morning Session -->
-                    <tr>
-                        <td class="time-col">10:00-10:30</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="bg-open"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">10:00-10:30</span><span class="class-name">フリーマット</span></div></td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">10:30-11:00</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td rowspan="2" class="bg-jiujitsu-beginner"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">10:30-11:30</span><span class="class-name">柔術 初級</span></div></td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">11:00-11:30</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">11:30-12:00</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="bg-jiujitsu-spar"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">11:30-12:00</span><span class="class-name">柔術 スパー</span></div></td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">12:00-12:30</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td class="empty">-</td>
-                        <td style="padding: 0; vertical-align: top; height: 70px;">
-                            <div style="height: 100%; display: flex; flex-direction: column;">
-                                <div class="bg-reset" style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">マットリセット</div>
-                                <div class="bg-open" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0;">
-                                    <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">12:05-12:30</span>
-                                    <span class="class-name" style="font-size: 13px; line-height: 1;">フリーマット</span>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    
-                    <!-- Spacer -->
-                    <tr style="height: 20px;"><td colspan="7" style="background-color: transparent; border: none;"></td></tr>
+              <thead>
+                <tr>
+                  <th class="time-col">TIME</th>
+                  <th>MON</th>
+                  <th>TUE</th>
+                  <th>WED</th>
+                  <th>THU</th>
+                  <th>FRI</th>
+                  <th>SAT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Morning Session -->
+                <tr>
+                  <td class="time-col">10:00-10:30</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="bg-open">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">10:00-10:30</span><span
+                        class="class-name">フリーマット</span></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="time-col">10:30-11:00</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td rowspan="2" class="bg-jiujitsu-beginner">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">10:30-11:30</span><span
+                        class="class-name">柔術 初級</span></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="time-col">11:00-11:30</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                </tr>
+                <tr>
+                  <td class="time-col">11:30-12:00</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="bg-jiujitsu-spar">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">11:30-12:00</span><span
+                        class="class-name">柔術 スパー</span></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="time-col">12:00-12:30</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td class="empty">-</td>
+                  <td style="padding: 0; vertical-align: top; height: 70px;">
+                    <div style="height: 100%; display: flex; flex-direction: column;">
+                      <div class="bg-reset"
+                        style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">
+                        マットリセット</div>
+                      <div class="bg-open"
+                        style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0;">
+                        <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">12:05-12:30</span>
+                        <span class="class-name" style="font-size: 13px; line-height: 1;">フリーマット</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
 
-                    <!-- Evening Session -->
-                    <tr>
-                        <td class="time-col">20:00-20:30</td>
-                        <!-- MON -->
-                        <td class="bg-open"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:00-20:30</span><span class="class-name">フリーマット</span></div></td>
-                        <!-- TUE -->
-                        <td class="bg-open"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:00-20:30</span><span class="class-name">フリーマット</span></div></td>
-                        <!-- WED -->
-                        <td rowspan="4" class="bg-open"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:00-22:00</span><span class="class-name">フリーマット</span></div></td>
-                        <!-- THU -->
-                        <td class="bg-open"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:00-20:30</span><span class="class-name">フリーマット</span></div></td>
-                        <!-- FRI -->
-                        <td class="bg-open"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:00-20:30</span><span class="class-name">フリーマット</span></div></td>
-                        <!-- SAT -->
-                        <td class="empty">-</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">20:30-21:00</td>
-                        <!-- MON -->
-                        <td rowspan="3" class="bg-jiujitsu-spar"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:30-22:00</span><span class="class-name">柔術スパー</span></div></td>
-                        <!-- TUE -->
-                        <td rowspan="2" class="bg-jiujitsu-all"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:30-21:30</span><span class="class-name">柔術<br>オールレベル</span></div></td>
-                        <!-- WED (rowspan) -->
-                        <!-- THU -->
-                        <td rowspan="2" class="bg-nogi-all"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:30-21:30</span><span class="class-name">No-Gi<br>オールレベル</span></div></td>
-                        <!-- FRI -->
-                        <td rowspan="2" class="bg-jiujitsu-all"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:30-21:30</span><span class="class-name">柔術<br>オールレベル</span></div></td>
-                        <!-- SAT -->
-                        <td class="empty">-</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">21:00-21:30</td>
-                        <!-- MON, TUE, WED, THU, FRI (rowspan) -->
-                        <!-- SAT -->
-                        <td class="empty">-</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">21:30-22:00</td>
-                        <!-- MON (rowspan) -->
-                        <!-- TUE -->
-                        <td class="bg-jiujitsu-spar"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">21:30-22:00</span><span class="class-name">柔術スパー</span></div></td>
-                        <!-- WED (rowspan) -->
-                        <!-- THU -->
-                        <td class="bg-nogi-spar"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">21:30-22:00</span><span class="class-name">No-Giスパー</span></div></td>
-                        <!-- FRI -->
-                        <td class="bg-jiujitsu-spar"><div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">21:30-22:00</span><span class="class-name">柔術スパー</span></div></td>
-                        <!-- SAT -->
-                        <td class="empty">-</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">22:00-22:30</td>
-                        <!-- MON -->
-                        <td style="padding: 0; vertical-align: top; height: 70px;">
-                            <div style="height: 100%; display: flex; flex-direction: column;">
-                                <div class="bg-reset" style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">マットリセット</div>
-                                <div class="bg-open" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0;">
-                                    <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">22:05-22:30</span>
-                                    <span class="class-name" style="font-size: 13px; line-height: 1;">フリーマット</span>
-                                </div>
-                            </div>
-                        </td>
-                        <!-- TUE -->
-                        <td style="padding: 0; vertical-align: top; height: 70px;">
-                            <div style="height: 100%; display: flex; flex-direction: column;">
-                                <div class="bg-reset" style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">マットリセット</div>
-                                <div class="bg-open" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0;">
-                                    <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">22:05-22:30</span>
-                                    <span class="class-name" style="font-size: 13px; line-height: 1;">フリーマット</span>
-                                </div>
-                            </div>
-                        </td>
-                        <!-- WED -->
-                        <td style="padding: 0; vertical-align: top; height: 70px;">
-                            <div style="height: 100%; display: flex; flex-direction: column;">
-                                <div class="bg-reset" style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">マットリセット</div>
-                                <div class="bg-training" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0; border-left: none;">
-                                    <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">22:05-22:30</span>
-                                    <span class="class-name" style="font-size: 13px; line-height: 1; color: #b38600;">補強トレ</span>
-                                </div>
-                            </div>
-                        </td>
-                        <!-- THU -->
-                        <td style="padding: 0; vertical-align: top; height: 70px;">
-                            <div style="height: 100%; display: flex; flex-direction: column;">
-                                <div class="bg-reset" style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">マットリセット</div>
-                                <div class="bg-training" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0; border-left: none;">
-                                    <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">22:05-22:30</span>
-                                    <span class="class-name" style="font-size: 13px; line-height: 1; color: #b38600;">補強トレ</span>
-                                </div>
-                            </div>
-                        </td>
-                        <!-- FRI -->
-                        <td style="padding: 0; vertical-align: top; height: 70px;">
-                            <div style="height: 100%; display: flex; flex-direction: column;">
-                                <div class="bg-reset" style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">マットリセット</div>
-                                <div class="bg-open" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0;">
-                                    <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">22:05-22:30</span>
-                                    <span class="class-name" style="font-size: 13px; line-height: 1;">フリーマット</span>
-                                </div>
-                            </div>
-                        </td>
-                        <!-- SAT -->
-                        <td class="empty">-</td>
-                    </tr>
-                </tbody>
+                <!-- Spacer -->
+                <tr style="height: 20px;">
+                  <td colspan="7" style="background-color: transparent; border: none;"></td>
+                </tr>
+
+                <!-- Evening Session -->
+                <tr>
+                  <td class="time-col">20:00-20:30</td>
+                  <!-- MON -->
+                  <td class="bg-open">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:00-20:30</span><span
+                        class="class-name">フリーマット</span></div>
+                  </td>
+                  <!-- TUE -->
+                  <td class="bg-open">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:00-20:30</span><span
+                        class="class-name">フリーマット</span></div>
+                  </td>
+                  <!-- WED -->
+                  <td rowspan="4" class="bg-open">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:00-22:00</span><span
+                        class="class-name">フリーマット</span></div>
+                  </td>
+                  <!-- THU -->
+                  <td class="bg-open">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:00-20:30</span><span
+                        class="class-name">フリーマット</span></div>
+                  </td>
+                  <!-- FRI -->
+                  <td class="bg-open">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:00-20:30</span><span
+                        class="class-name">フリーマット</span></div>
+                  </td>
+                  <!-- SAT -->
+                  <td class="empty">-</td>
+                </tr>
+                <tr>
+                  <td class="time-col">20:30-21:00</td>
+                  <!-- MON -->
+                  <td rowspan="3" class="bg-jiujitsu-spar">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:30-22:00</span><span
+                        class="class-name">柔術スパー</span></div>
+                  </td>
+                  <!-- TUE -->
+                  <td rowspan="2" class="bg-jiujitsu-all">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:30-21:30</span><span
+                        class="class-name">柔術<br>オールレベル</span></div>
+                  </td>
+                  <!-- WED (rowspan) -->
+                  <!-- THU -->
+                  <td rowspan="2" class="bg-nogi-all">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:30-21:30</span><span
+                        class="class-name">No-Gi<br>オールレベル</span></div>
+                  </td>
+                  <!-- FRI -->
+                  <td rowspan="2" class="bg-jiujitsu-all">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">20:30-21:30</span><span
+                        class="class-name">柔術<br>オールレベル</span></div>
+                  </td>
+                  <!-- SAT -->
+                  <td class="empty">-</td>
+                </tr>
+                <tr>
+                  <td class="time-col">21:00-21:30</td>
+                  <!-- MON, TUE, WED, THU, FRI (rowspan) -->
+                  <!-- SAT -->
+                  <td class="empty">-</td>
+                </tr>
+                <tr>
+                  <td class="time-col">21:30-22:00</td>
+                  <!-- MON (rowspan) -->
+                  <!-- TUE -->
+                  <td class="bg-jiujitsu-spar">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">21:30-22:00</span><span
+                        class="class-name">柔術スパー</span></div>
+                  </td>
+                  <!-- WED (rowspan) -->
+                  <!-- THU -->
+                  <td class="bg-nogi-spar">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">21:30-22:00</span><span
+                        class="class-name">No-Giスパー</span></div>
+                  </td>
+                  <!-- FRI -->
+                  <td class="bg-jiujitsu-spar">
+                    <div class="class-box"><span style="font-size: 11px; margin-bottom: 2px;">21:30-22:00</span><span
+                        class="class-name">柔術スパー</span></div>
+                  </td>
+                  <!-- SAT -->
+                  <td class="empty">-</td>
+                </tr>
+                <tr>
+                  <td class="time-col">22:00-22:30</td>
+                  <!-- MON -->
+                  <td style="padding: 0; vertical-align: top; height: 70px;">
+                    <div style="height: 100%; display: flex; flex-direction: column;">
+                      <div class="bg-reset"
+                        style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">
+                        マットリセット</div>
+                      <div class="bg-open"
+                        style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0;">
+                        <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">22:05-22:30</span>
+                        <span class="class-name" style="font-size: 13px; line-height: 1;">フリーマット</span>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- TUE -->
+                  <td style="padding: 0; vertical-align: top; height: 70px;">
+                    <div style="height: 100%; display: flex; flex-direction: column;">
+                      <div class="bg-reset"
+                        style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">
+                        マットリセット</div>
+                      <div class="bg-open"
+                        style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0;">
+                        <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">22:05-22:30</span>
+                        <span class="class-name" style="font-size: 13px; line-height: 1;">フリーマット</span>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- WED -->
+                  <td style="padding: 0; vertical-align: top; height: 70px;">
+                    <div style="height: 100%; display: flex; flex-direction: column;">
+                      <div class="bg-reset"
+                        style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">
+                        マットリセット</div>
+                      <div class="bg-training"
+                        style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0; border-left: none;">
+                        <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">22:05-22:30</span>
+                        <span class="class-name" style="font-size: 13px; line-height: 1; color: #b38600;">補強トレ</span>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- THU -->
+                  <td style="padding: 0; vertical-align: top; height: 70px;">
+                    <div style="height: 100%; display: flex; flex-direction: column;">
+                      <div class="bg-reset"
+                        style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">
+                        マットリセット</div>
+                      <div class="bg-training"
+                        style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0; border-left: none;">
+                        <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">22:05-22:30</span>
+                        <span class="class-name" style="font-size: 13px; line-height: 1; color: #b38600;">補強トレ</span>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- FRI -->
+                  <td style="padding: 0; vertical-align: top; height: 70px;">
+                    <div style="height: 100%; display: flex; flex-direction: column;">
+                      <div class="bg-reset"
+                        style="padding: 2px 0; font-size: 11px; text-align: center; border-bottom: 1px solid #e0e0e0;">
+                        マットリセット</div>
+                      <div class="bg-open"
+                        style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 0;">
+                        <span style="font-size: 10px; margin-bottom: 2px; line-height: 1;">22:05-22:30</span>
+                        <span class="class-name" style="font-size: 13px; line-height: 1;">フリーマット</span>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- SAT -->
+                  <td class="empty">-</td>
+                </tr>
+              </tbody>
             </table>
           </div>
           <div class="class-descriptions">
@@ -436,7 +619,7 @@
               <div class="desc-color jiujitsu-all"></div>
               <div class="desc-text">
                 <h4>柔術 オールレベル</h4>
-                <p>柔術着を着用し、初心者からすべてのレベルの方向けたクラスです。</p>
+                <p>柔術着を着用し、初心者からすべてのレベルの方に向けたクラスです。</p>
               </div>
             </div>
             <div class="desc-item">
@@ -482,16 +665,30 @@
         </div>
         <div class="footer-links">
           <h3>Menu</h3>
-          <ul><li><a href="index.html">HOME</a></li><li><a href="beginners.html">はじめての方へ</a></li><li><a href="pricing.html">クラス・料金</a></li><li><a href="instructors.html">インストラクター</a></li></ul>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="beginners.html">はじめての方へ</a></li>
+            <li><a href="pricing.html">クラス・料金</a></li>
+            <li><a href="instructors.html">インストラクター</a></li>
+          </ul>
         </div>
         <div class="footer-links">
           <h3>About</h3>
-          <ul><li><a href="schedule.html">スケジュール</a></li><li><a href="access.html">アクセス・店舗情報</a></li><li><a href="faq.html">よくあるご質問</a></li><li><a href="contact.html">お問合せ・体験予約</a></li><li><a href="privacy.html">プライバシーポリシー</a></li></ul>
+          <ul>
+            <li><a href="schedule.html">スケジュール</a></li>
+            <li><a href="access.html">アクセス・店舗情報</a></li>
+            <li><a href="faq.html">よくあるご質問</a></li>
+            <li><a href="contact.html">お問合せ・体験予約</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 SCORPION GYM. All rights reserved.</p></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SCORPION GYM. All rights reserved.</p>
+      </div>
     </div>
   </footer>
   <script src="js/script.js"></script>
 </body>
+
 </html>
